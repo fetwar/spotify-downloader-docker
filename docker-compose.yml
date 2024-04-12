@@ -1,0 +1,15 @@
+services:
+  spotdl:
+    build: .
+    volumes:
+      - "./config.json:/root/.spotdl/config.json"
+      - "./downloads:/downloads"
+
+  # This doesn't really work lol, was cool to try though
+  spotdl-webserver:
+    build: .
+    volumes:
+      - "./downloads:/downloads"
+    ports:
+      - "8001:80"
+    command: web --port 80 --web-use-output-dir
