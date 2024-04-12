@@ -1,10 +1,12 @@
 name: Docker Image CI
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+#  push:
+#    branches: [ "main" ]
+#  pull_request:
+#    branches: [ "main" ]
+  # Allow it to be manually run
+  workflow_dispatch:
 
 jobs:
 
@@ -14,6 +16,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    
+
     - name: Build the Docker image with make build
       run: make build
