@@ -11,6 +11,8 @@ If you're just using the docker image... Idk, I haven't done that and like my sh
 - I recommend downloading `docker-compose.yml` and starting with that.
 
 ## Usage with Make
+If you aren't in the `docker` system group, you may have to append `sudo` to these commands.
+
 Downloaded files will be placed in `./downloads`
 
 ```shell
